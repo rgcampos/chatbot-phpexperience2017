@@ -1,0 +1,68 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>ChatBot - PHP Experience</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="ChatBot - PHP Experience">
+    <meta name="author" content="IBM GBS Brasil">
+
+    <link rel="stylesheet" href="styles/bootstrap.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/config.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/jquery.mCustomScrollbar.css" crossorigin="anonymous">
+
+    <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+  <![endif]-->
+</head>
+
+<body ng-app="chatBot">
+
+
+    <div class="container" ng-controller="chat" ng-init="load()">
+        <br><br><br>
+        <div id="bodybox">
+            <div id="header" class="row">
+                <div class="col-sm-12 col-md-12" style="margin-top: 6px;">
+                    <img src="images/logo.png" alt="iMasters">
+                </div>
+            </div>
+
+
+            <div id="content" class="row">
+                <div id="contentChat" name="contentChat" class="col-sm-12 col-md-12">
+
+                </div>
+            </div>
+
+            <div id="form" class="row">
+                <div class="col-sm-12 col-md-12">
+                    <div class="input-group" style="line-height: 50px;align-items: center; display: flex;">
+                        <input type="text" id="txtMessage" name="txtMessage" class="form-control" placeholder="Digite seu texto..." my-enter="sendMessage()"
+                            ng-model="txtMessage">&nbsp;
+                        <button class="btn btn-primary" id="btnSend" name="btnSend" type="button" ng-click="sendMessage()">Enviar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="js/jquery-3.1.1.min.js" crossorigin="anonymous"></script>
+    <script src="js/angular.min.js" crossorigin="anonymous"></script>
+    <script src="js/bootstrap.min.js" crossorigin="anonymous"></script>
+    <script src="js/jquery.mCustomScrollbar.js" crossorigin="anonymous"></script>
+
+
+    <script src="js/angular/main.js" crossorigin="anonymous"></script>
+    <script src="js/angular/controller/chat.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
